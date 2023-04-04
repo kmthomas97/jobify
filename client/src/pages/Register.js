@@ -44,7 +44,7 @@ const Register = () => {
     }
 
 
-    //invokes on intial render and when user or navigate changes
+    //invokes on initial render and when user or navigate changes
     useEffect(() => {
         if(user){
             setTimeout(() => {
