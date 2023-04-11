@@ -158,6 +158,7 @@ if (action.type === UPDATE_USER_ERROR) {
 if (action.type === HANDLE_CHANGE) {
     return {
         ...state,
+        page:1,
         [action.payload.name]: action.payload.value,
     }
 }
@@ -284,6 +285,9 @@ if(action.type === GET_JOBS_SUCCESS){
         }
     }
 
+    if(action.type === CHANGE_PAGE) {
+        return { ...state, page: action.payload.page}
+    }
     throw new Error(`no such action : ${action.type}`)
 }
 

@@ -20,7 +20,8 @@ const JobsContainer = () => {
 
     useEffect(() => {
         getJobs()
-    }, [search,searchStatus,searchType,sort])
+        //eslint-disable-next-line
+    }, [page, search, searchStatus, searchType, sort])
     if(isLoading){
         return <Loading center />
     }
